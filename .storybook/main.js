@@ -1,31 +1,17 @@
-// module.exports = {
-//     //   stories: ['./*.stories.js'],
-//     stories: ['./**/*.stories.@(js|jsx|ts|tsx)'],
-//     // stories: ['./Component.stories.js'],
-//     framework: {
-//         name: '@storybook/react-webpack5',
-//         options: {}
-//     },
-//     docs: {
-//         autodocs: true
-//     }
-// };
-
-
+/** @type { import('@storybook/react-webpack5').StorybookConfig } */
 const config = {
-    stories: ['../src/**/*.stories.@(js|jsx)'],
-    addons: [],
-    framework: {
-        name: "@storybook/react-webpack5",
-        options: {},
-    },
-    features: {
-        interactionsDebugger: true,
-    },
-    docs: {
-        autodocs: true,
-    },
-    staticDirs: ["../public"],
-}
-
+  stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
+  addons: [
+    "@storybook/addon-links",
+    "@storybook/addon-essentials",
+    "@storybook/addon-interactions",
+  ],
+  framework: {
+    name: "@storybook/react-webpack5",
+    options: {},
+  },
+  docs: {
+    autodocs: "tag",
+  },
+};
 export default config;
