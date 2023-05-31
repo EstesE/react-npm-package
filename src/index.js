@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 
 const CounterComponent = () => {
     const [count, setCount] = useState(0);
-
+    const updateCount = (val) => {
+        val === "-" ? setCount(count - 1) : setCount(count + 1);
+    };
     return (
         <div>
             <p>Currently, the count is {count}</p>
-            <button onClick={() => setCount(count - 1)}>Subtract</button>
-            <button onClick={() => setCount(count + 1)}>Add</button>
+            <button onClick={() => updateCount('-')}>Subtract</button>
+            <button onClick={() => updateCount('+')}>Add</button>
         </div>
     );
 };
