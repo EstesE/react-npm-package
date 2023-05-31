@@ -24,6 +24,8 @@
     "@rollup/plugin-commonjs": "^25.0.0",
     "@rollup/plugin-node-resolve": "^15.1.0",
     "@rollup/plugin-terser": "^0.4.3",
+    "@storybook/addon-docs": "^7.0.18",
+    "@storybook/addon-essentials": "^7.0.18",
     "@storybook/react": "^7.0.18",
     "@storybook/react-webpack5": "^7.0.18",
     "react": "^18.2.0",
